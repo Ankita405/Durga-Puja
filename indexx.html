@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga Puja in Meghipur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Maa Tanneshwari Durga Puja Samiti, Meghipur</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="video.html">Videos</a></li>
+                <li><a href="document.html">Document</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Celebrate Durga Puja in the Heart of Meghipur</h2>
+        
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/durga1.jpg" alt="Slide 1">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="images/durga2.jpg" alt="Slide 2">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="images/durga3.jpg" alt="Slide 3">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="images/durga4.jpg" alt="Slide 4">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="images/durga5.jpg" alt="Slide 5">
+            </div>
+    
+            <!-- Navigation Arrows -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    
+        <p>Durga Puja is one of the grandest festivals celebrated in Meghipur, Bihar. This sacred event brings together people from all walks of life to celebrate the victory of good over evil. With beautifully crafted idols, mesmerizing decorations, and a vibrant atmosphere, the festival is a true reflection of Meghipur's rich culture and tradition.</p>
+        <p>Over the years, Durga Puja in Meghipur has evolved into a large-scale cultural event that includes traditional dances, traditional music, and performances, making it a must-visit for anyone looking to experience the true essence of Bihar.</p>
+        <p>We invite you to immerse yourself in the spiritual and festive fervor that unites families and communities in celebration.</p>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex = 0;
+            showSlides();
+        
+            function showSlides() {
+                let slides = document.getElementsByClassName("mySlides");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                slides[slideIndex-1].style.display = "block";  
+                setTimeout(showSlides, 5000); // Change image every 5 seconds
+            }
+        
+            window.plusSlides = function(n) {
+                showSlides(slideIndex += n);
+            };
+        });
+        </script>
+        <footer>
+            <p>&copy; 2024 Durga Puja Meghipur .</p>
+            <p>Website owned by Maa Tanneshwari Durga Puja Samiti.<br>Designed by Ankita</p>
+            <p>Last updated: 15 September 2024</p>
+        </footer>
